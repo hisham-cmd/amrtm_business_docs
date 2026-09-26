@@ -1,0 +1,40 @@
+# ─────────────────────────────────────────────────────────────
+#  global gitignore — حماية من الأسرار في كل المستودعات
+#  يُفعَّل بـ: git config --global core.excludesfile <هذا الملف>
+# ─────────────────────────────────────────────────────────────
+
+# أسرار الإعدادات — لا تُرفع أبداً
+.env
+.env.*
+!.env.example
+ftp-credentials.cfg
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+credentials.json
+secrets.json
+
+# إعدادات النشر التي تحوي APP_KEY وكلمات مرور
+app.yaml
+render.yaml
+
+# أدوات النشر الخاصة (خارج المستودع أصلاً — شبكة أمان إضافية)
+deploy-ftp.ps1
+deploy-ftp.bat
+.deploy-state.tsv
+.ftp-deploy-state.tsv
+deploy-logs/
+
+# كاش وسجلات
+*.log
+.phpunit.result.cache
+
+# نظام التشغيل والمحررات
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tmp
+~$*

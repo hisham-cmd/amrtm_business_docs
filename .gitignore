@@ -1,0 +1,41 @@
+# ── أسرار: لا تُرفع أبداً ──
+.env
+.env.*
+!.env.example
+app.yaml
+render.yaml
+
+# ─────────────────────────────────────────────────────────────
+#  تحذير: بيانات الاتصال الحقيقية موجودة عمداً في deployment/
+#  بقرار من مدير المنصة. هي NOT مُتجاهَلة هنا حتى يمكن commitها.
+#  اقرأ deployment/SECRETS-WARNING.md قبل أي عملية push.
+# ─────────────────────────────────────────────────────────────
+# deployment/ftp-credentials.cfg
+# deployment/production-db.cfg
+# deployment/prod-db.php
+# deployment/prod-db-token.txt
+
+# مفاتيح
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+credentials.json
+secrets.json
+
+# حالة النشر وسجلاته
+.ftp-deploy-state.tsv
+deploy-logs/
+
+# كاش وسجلات
+*.log
+.phpunit.result.cache
+
+# نظام التشغيل والمحررات
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tmp
+~$*
